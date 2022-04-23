@@ -21,7 +21,6 @@ class ChildButton extends React.Component {
   }
 
   render() {
-    var iconClass = classnames('mfb-component__child-icon', this.props.icon);
     var className = classnames('mfb-component__button--child',
                                this.props.className,
                                {"mfb-component__button--disabled": this.props.disabled});
@@ -32,7 +31,7 @@ class ChildButton extends React.Component {
            onClick={this.handleOnClick}
            style={this.props.style}
            className={className}>
-          <i className={iconClass}></i>
+          <FontAwesomeIcon icon={this.props.icon} />
         </a>
       </li>
     );
